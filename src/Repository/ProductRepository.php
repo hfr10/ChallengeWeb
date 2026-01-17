@@ -8,6 +8,7 @@ use App\Models\Category;
 
 /**
  * Repository pour les produits
+ * Gère les opérations CRUD et requêtes sur les produits
  */
 class ProductRepository
 {

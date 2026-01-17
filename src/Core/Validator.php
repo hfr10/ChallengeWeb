@@ -5,6 +5,7 @@ namespace App\Core;
 /**
  * Validateur de données
  * Fournit des méthodes pour valider les entrées utilisateur
+ * Supporte validation requise, email, longueur, comparaison
  */
 class Validator
 {

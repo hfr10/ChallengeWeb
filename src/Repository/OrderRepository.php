@@ -9,6 +9,7 @@ use App\Models\User;
 
 /**
  * Repository pour les commandes
+ * Gère la persistance et récupération des commandes
  */
 class OrderRepository
 {

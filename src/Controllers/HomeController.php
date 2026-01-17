@@ -22,16 +22,17 @@ class HomeController extends Controller
 
     /**
      * Page d'accueil
+     * Affiche les produits vedettes et catégories
      */
     public function index(): void
     {
-        // Produits vedettes
+        // Récupération des produits vedettes (8 maximum)
         $featuredProducts = $this->productRepository->findFeatured(8);
 
-        // Catégories principales
+        // Récupération des catégories racines
         $categories = $this->categoryRepository->findRootCategories();
 
-        // Derniers produits
+        // Récupération des derniers produits ajoutés
         $latestProducts = $this->productRepository->findAll([], 4);
 
         $this->render('home/index', [

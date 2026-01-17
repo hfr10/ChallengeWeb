@@ -4,7 +4,7 @@ namespace App\Models;
 
 /**
  * Modèle User
- * Représente un utilisateur du système
+ * Représente un utilisateur du système (client ou admin)
  */
 class User
 {
@@ -23,6 +23,8 @@ class User
 
     /**
      * Crée une instance à partir d'un tableau
+     * @param array $data Données de l'utilisateur
+     * @return self Instance de User
      */
     public static function fromArray(array $data): self
     {

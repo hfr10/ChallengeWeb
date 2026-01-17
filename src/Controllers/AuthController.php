@@ -11,6 +11,7 @@ use App\Models\User;
 
 /**
  * Contrôleur d'authentification
+ * Gère la connexion, l'inscription et la déconnexion des utilisateurs
  */
 class AuthController extends Controller
 {

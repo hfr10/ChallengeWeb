@@ -4,7 +4,7 @@ namespace App\Models;
 
 /**
  * Modèle Order
- * Représente une commande
+ * Représente une commande avec ses informations de livraison et facturation
  */
 class Order
 {
@@ -16,7 +16,7 @@ class Order
     public float $shipping_cost = 0;
     public float $total;
 
-    // Adresse de livraison
+    // Informations d'adresse de livraison
     public ?string $shipping_first_name = null;
     public ?string $shipping_last_name = null;
     public ?string $shipping_address = null;

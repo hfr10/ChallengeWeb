@@ -9,6 +9,7 @@ use App\Repository\ProductRepository;
 
 /**
  * Contrôleur du panier
+ * Gère l'ajout, la modification et la suppression d'articles
  */
 class CartController extends Controller
 {

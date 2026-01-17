@@ -4,7 +4,7 @@ namespace App\Models;
 
 /**
  * Modèle Category
- * Représente une catégorie de produits
+ * Représente une catégorie de produits avec support hiérarchique
  */
 class Category
 {

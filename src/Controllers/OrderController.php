@@ -13,6 +13,7 @@ use App\Models\OrderItem;
 
 /**
  * Contrôleur des commandes
+ * Gère le processus de commande et l'historique
  */
 class OrderController extends Controller
 {
