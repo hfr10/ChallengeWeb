@@ -26,8 +26,11 @@ class CartItem
     public static function fromArray(array $data): self
     {
         $item = new self();
+        // Propriétés à ignorer (gérées manuellement)
+        $ignore = ['size', 'product'];
+
         foreach ($data as $key => $value) {
-            if (property_exists($item, $key)) {
+            if (property_exists($item, $key) && !in_array($key, $ignore)) {
                 $item->$key = $value;
             }
         }
