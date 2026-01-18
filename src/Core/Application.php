@@ -51,6 +51,10 @@ class Application
         $configPath = dirname(__DIR__, 2) . '/config';
         foreach (glob($configPath . '/*.php') as $file) {
             $name = basename($file, '.php');
+            // Ne pas charger routes.php ici (chargé séparément)
+            if ($name === 'routes') {
+                continue;
+            }
             $this->config[$name] = require $file;
         }
     }
