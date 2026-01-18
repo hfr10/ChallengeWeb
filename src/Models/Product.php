@@ -139,6 +139,11 @@ class Product
     public function getImageUrl(): string
     {
         if ($this->image) {
+            // Si c'est déjà une URL complète (http:// ou https://)
+            if (str_starts_with($this->image, 'http://') || str_starts_with($this->image, 'https://')) {
+                return $this->image;
+            }
+            // Sinon, c'est un fichier local
             return '/images/products/' . $this->image;
         }
         return 'https://via.placeholder.com/400x400?text=' . urlencode($this->name);
