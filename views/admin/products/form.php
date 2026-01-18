@@ -66,6 +66,24 @@ $errors = \App\Core\Session::getFlash('errors', []);
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                     ><?= htmlspecialchars($old['description'] ?? $product->description ?? '') ?></textarea>
                 </div>
+
+                <div class="col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Image du produit</label>
+                    <input
+                        type="text"
+                        name="image"
+                        value="<?= htmlspecialchars($old['image'] ?? $product->image ?? '') ?>"
+                        placeholder="URL de l'image (ex: https://exemple.com/image.jpg)"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                    >
+                    <p class="text-sm text-gray-500 mt-1">Collez l'URL complète d'une image (https://...)</p>
+                    <?php if ($isEdit && $product->image): ?>
+                        <div class="mt-3">
+                            <p class="text-sm text-gray-500 mb-2">Image actuelle :</p>
+                            <img src="<?= htmlspecialchars($product->getImageUrl()) ?>" alt="Aperçu" class="w-32 h-32 object-cover rounded-lg border">
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
 

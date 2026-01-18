@@ -212,6 +212,7 @@ class ProductController extends Controller
         $product->sale_price = !empty($data['sale_price']) ? (float) $data['sale_price'] : null;
         $product->stock = (int) ($data['stock'] ?? 0);
         $product->sku = $data['sku'] ?? null;
+        $product->image = !empty($data['image']) ? $data['image'] : null;
         $product->category_id = !empty($data['category_id']) ? (int) $data['category_id'] : null;
         $product->brand = $data['brand'] ?? null;
         $product->is_active = isset($data['is_active']);
