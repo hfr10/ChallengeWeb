@@ -41,11 +41,12 @@
                     <?php if (isset($_SESSION['user'])): ?>
                         <!-- Utilisateur connecté -->
                         <div class="relative group">
-                            <button class="flex items-center gap-2 hover:text-green-200 transition">
+                            <button class="flex items-center gap-2 hover:text-green-200 transition py-2">
                                 <i class="fas fa-user"></i>
                                 <span><?= htmlspecialchars($_SESSION['user']['first_name'] ?? 'Mon compte') ?></span>
+                                <i class="fas fa-chevron-down text-xs"></i>
                             </button>
-                            <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-50">
+                            <div class="absolute right-0 top-full w-48 bg-white rounded-lg shadow-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50">
                                 <a href="/orders" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Mes commandes</a>
                                 <?php if (($_SESSION['user']['role'] ?? '') === 'admin'): ?>
                                     <a href="/admin" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Administration</a>
