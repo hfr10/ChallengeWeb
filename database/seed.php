@@ -266,6 +266,32 @@ try {
             'is_featured' => true,
             'sizes' => ['5'],
         ],
+        [
+            'name' => 'Ballon LDC Finale a Munich',
+            'slug' => 'ballon-ldc-finale-munich',
+            'description' => 'Inspiré par les tons verts des dômes cuivrés de Munich et ses décors dignes d\'une carte postale, ce ballon adidas est un hommage élégant à l\'hôte de la finale de l\'UEFA Champions League 24/25.',
+            'short_description' => 'Ballon LDC 2024/25, finale PSG-Inter',
+            'price' => 60,
+            'stock' => 28,
+            'sku' => 'BAL-LDC-FIN-MUN',
+            'category_id' => $categoryIds['ballons'],
+            'brand' => 'Adidas',
+            'is_featured' => true,
+            'sizes' => ['5'],
+        ],
+        [
+            'name' => 'Ballon LDC Finale a Kiev',
+            'slug' => 'ballon-ldc-finale-kiev',
+            'description' => 'Le ballon de la LDC de la finale en Russie de la saison 2018/2019. Redécouvrez la finale entre le Réal Madrid et Liverpool.',
+            'short_description' => 'Ballon LDC 2018/19, finale Real-Liverpool',
+            'price' => 29.99,
+            'stock' => 30,
+            'sku' => 'BAL-LDC-FIN-KIE',
+            'category_id' => $categoryIds['ballons'],
+            'brand' => 'Adidas',
+            'is_featured' => true,
+            'sizes' => ['5'],
+        ],
 
         // Gardien
         [
