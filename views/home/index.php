@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12 mb-12">
+<section class="hero-section bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12 mb-12">
     <div class="max-w-3xl">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">
             Équipez-vous comme un pro
@@ -15,12 +15,12 @@
 
 <!-- Catégories -->
 <section class="mb-12">
-    <h2 class="text-2xl font-bold mb-6">Nos catégories</h2>
+    <h2 class="section-title text-2xl font-bold mb-6">Nos catégories</h2>
     <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
         <?php foreach ($categories as $category): ?>
             <a href="/categories/<?= htmlspecialchars($category->slug) ?>"
-               class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition group">
-                <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition">
+               class="category-card bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition group">
+                <div class="category-icon w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition">
                     <?php
                     $icon = match($category->slug) {
                         'maillots' => 'fa-shirt',
@@ -43,7 +43,7 @@
 <!-- Produits vedettes -->
 <section class="mb-12">
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold">Produits vedettes</h2>
+        <h2 class="section-title text-2xl font-bold">Produits vedettes</h2>
         <a href="/products" class="text-green-600 hover:text-green-700 font-medium">
             Voir tout <i class="fas fa-arrow-right ml-1"></i>
         </a>
@@ -52,15 +52,15 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <?php foreach ($featuredProducts as $product): ?>
             <a href="/products/<?= htmlspecialchars($product->slug) ?>"
-               class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition group">
-                <div class="aspect-square bg-gray-100 relative">
+               class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition group">
+                <div class="product-image aspect-square bg-gray-100 relative">
                     <img
                         src="<?= htmlspecialchars($product->getImageUrl()) ?>"
                         alt="<?= htmlspecialchars($product->name) ?>"
                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                     >
                     <?php if ($product->isOnSale()): ?>
-                        <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                        <span class="sale-badge absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
                             -<?= $product->getDiscountPercentage() ?>%
                         </span>
                     <?php endif; ?>
@@ -83,20 +83,20 @@
 </section>
 
 <!-- Bannière promotionnelle -->
-<section class="bg-gray-800 text-white rounded-xl p-8 mb-12 flex flex-col md:flex-row items-center justify-between">
+<section class="promo-banner bg-gray-800 text-white rounded-xl p-8 mb-12 flex flex-col md:flex-row items-center justify-between">
     <div>
         <h2 class="text-2xl font-bold mb-2">Livraison gratuite</h2>
         <p class="text-gray-300">Sur toutes les commandes de plus de 100€</p>
     </div>
     <div class="mt-4 md:mt-0">
-        <i class="fas fa-truck text-5xl text-green-400"></i>
+        <i class="truck-icon fas fa-truck text-5xl text-green-400"></i>
     </div>
 </section>
 
 <!-- Derniers produits -->
 <section>
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold">Nouveautés</h2>
+        <h2 class="section-title text-2xl font-bold">Nouveautés</h2>
         <a href="/products?sort=newest" class="text-green-600 hover:text-green-700 font-medium">
             Voir tout <i class="fas fa-arrow-right ml-1"></i>
         </a>
