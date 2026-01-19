@@ -295,15 +295,15 @@ try {
 
         // Gardien
         [
-            'name' => 'Gants Uhlsport Supergrip',
-            'slug' => 'gants-uhlsport-supergrip',
-            'description' => 'Gants de gardien professionnels avec mousse Supergrip pour une adhérence maximale.',
+            'name' => 'Nike Gants GK Match - HO23',
+            'slug' => 'gants-nike-gk-match-ho23',
+            'description' => 'Découvrez les gants de gardiens de foot produit par Nike, qui donne plus de protection pour des arrêts spectaculaires en plein match.',
             'short_description' => 'Gants pro haute adhérence',
-            'price' => 89.99,
-            'stock' => 25,
-            'sku' => 'GAR-UHL-SUP',
+            'price' => 11.99,
+            'stock' => 125,
+            'sku' => 'GAR-NIK-GKM-HO23',
             'category_id' => $categoryIds['gardien'],
-            'brand' => 'Uhlsport',
+            'brand' => 'Nike',
             'is_featured' => false,
             'sizes' => ['7', '8', '9', '10', '11'],
         ],
