@@ -1,11 +1,152 @@
 /* Styles personnalisés Football Shop */
 
-/* Hero Section amélioré */
-.hero-section {
-    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+/* ===== PAGE PRODUITS - FILTRES ET CARTES ===== */
+
+/* Sidebar filtres */
+.filter-sidebar {
+    position: sticky !important;
+    top: 20px !important;
+}
+
+.filter-box {
+    background: white !important;
+    border: 2px solid #16a34a !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.15) !important;
+    transition: all 0.3s ease !important;
+}
+
+.filter-box:hover {
+    box-shadow: 0 12px 32px rgba(22, 163, 74, 0.25) !important;
+    border-color: #22c55e !important;
+}
+
+.filter-box h2 {
+    color: #16a34a !important;
+    position: relative !important;
+    padding-bottom: 10px !important;
+}
+
+.filter-box h2::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 40px !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+}
+
+/* Bouton filtres */
+.filter-button {
+    background: linear-gradient(135deg, #16a34a, #15803d) !important;
+    transition: all 0.3s ease !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.filter-button:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.4) !important;
+}
+
+/* Cartes produits - Impact maximal */
+.product-card {
+    position: relative !important;
+    overflow: visible !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Coin décoratif */
+.product-card::before {
+    display: none !important;
+}
+
+.product-card:hover::before {
+    display: none !important;
+}
+
+.product-card:hover::after {
+    display: none !important;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2) !important;
+    border-color: #16a34a !important;
+}
+
+/* Image produit zoom */
+.product-image {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.product-image img {
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.2) rotate(2deg) !important;
+}
+
+/* Badge solde */
+.sale-badge {
+    transform: rotate(-18deg) !important;
+    background: linear-gradient(135deg, #ef4444, #991b1b) !important;
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.6) !important;
+    font-weight: 900 !important;
+    animation: salePulse 1.5s ease-in-out infinite !important;
+}
+
+@keyframes salePulse {
+    0%, 100% { transform: rotate(-18deg) scale(1); }
+    50% { transform: rotate(-18deg) scale(1.12); }
+}
+
+/* Pagination */
+.pagination-link {
+    transition: all 0.3s ease !important;
+    border: 2px solid #e5e7eb !important;
+    font-weight: 600 !important;
+}
+
+.pagination-link:hover {
+    border-color: #16a34a !important;
+    color: #16a34a !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 16px rgba(22, 163, 74, 0.15) !important;
+}
+
+.pagination-current {
+    background: linear-gradient(135deg, #16a34a, #15803d) !important;
+    color: white !important;
+    border: 2px solid #16a34a !important;
+    font-weight: 900 !important;
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3) !important;
+}
+
+/* Titre page produits */
+.page-title {
+    position: relative !important;
+    padding-bottom: 15px !important;
+}
+
+.page-title::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 60px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #16a34a, #22c55e, #84cc16) !important;
+    animation: titleLine 2s ease-in-out infinite !important;
+}
+
+@keyframes titleLine {
+    0%, 100% { width: 60px; }
+    50% { width: 120px; }
 }
 
 .hero-section::before {

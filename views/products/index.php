@@ -4,8 +4,8 @@ $currentCategory = $category ?? null;
 
 <div class="flex flex-col md:flex-row gap-8">
     <!-- Sidebar Filtres -->
-    <aside class="w-full md:w-64 flex-shrink-0">
-        <div class="bg-white rounded-lg shadow-md p-6">
+    <aside class="filter-sidebar w-full md:w-64 flex-shrink-0">
+        <div class="filter-box rounded-lg p-6">
             <h2 class="font-bold text-lg mb-4">Filtres</h2>
 
             <form action="<?= $currentCategory ? '/categories/' . htmlspecialchars($currentCategory->slug) : '/products' ?>" method="GET">
@@ -81,7 +81,7 @@ $currentCategory = $category ?? null;
                     </select>
                 </div>
 
-                <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition">
+                <button type="submit" class="filter-button w-full bg-green-600 text-white py-2 rounded-lg font-medium hover:bg-green-700 transition">
                     Appliquer les filtres
                 </button>
 
@@ -96,7 +96,7 @@ $currentCategory = $category ?? null;
     <!-- Liste des produits -->
     <div class="flex-1">
         <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold">
+            <h1 class="page-title text-2xl font-bold">
                 <?= $currentCategory ? htmlspecialchars($currentCategory->name) : 'Tous les produits' ?>
             </h1>
             <p class="text-gray-600"><?= $pagination['totalItems'] ?> produits</p>
@@ -112,15 +112,15 @@ $currentCategory = $category ?? null;
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <?php foreach ($products as $product): ?>
                     <a href="/products/<?= htmlspecialchars($product->slug) ?>"
-                       class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition group">
-                        <div class="aspect-square bg-gray-100 relative">
+                       class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition group">
+                        <div class="product-image aspect-square bg-gray-100 relative">
                             <img
                                 src="<?= htmlspecialchars($product->getImageUrl()) ?>"
                                 alt="<?= htmlspecialchars($product->name) ?>"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                             >
                             <?php if ($product->isOnSale()): ?>
-                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                                <span class="sale-badge absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
                                     -<?= $product->getDiscountPercentage() ?>%
                                 </span>
                             <?php endif; ?>
