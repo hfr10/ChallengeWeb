@@ -22,7 +22,7 @@
         <!-- Liste des articles -->
         <div class="flex-1">
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div v-for="item in items" :key="item.id" class="flex gap-4 p-6 border-b border-gray-100 last:border-0">
+                <div v-for="item in items" :key="item.id" class="cart-item flex gap-4 p-6 border-b border-gray-100 last:border-0">
                     <!-- Image -->
                     <a :href="'/products/' + item.slug" class="flex-shrink-0">
                         <img :src="item.image" :alt="item.name" class="w-24 h-24 object-cover rounded-lg">
@@ -41,14 +41,14 @@
                     <div class="flex items-center gap-2">
                         <button
                             @click="updateQuantity(item, item.quantity - 1)"
-                            class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
+                            class="quantity-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
                         >
                             <i class="fas fa-minus text-sm"></i>
                         </button>
                         <span class="w-8 text-center">{{ item.quantity }}</span>
                         <button
                             @click="updateQuantity(item, item.quantity + 1)"
-                            class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
+                            class="quantity-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
                         >
                             <i class="fas fa-plus text-sm"></i>
                         </button>
@@ -80,7 +80,7 @@
 
         <!-- Récapitulatif -->
         <div class="lg:w-80">
-            <div class="bg-white rounded-lg shadow-md p-6 sticky top-6">
+            <div class="cart-summary bg-white rounded-lg shadow-md p-6 sticky top-6">
                 <h2 class="text-xl font-bold mb-6">Récapitulatif</h2>
 
                 <div class="space-y-4 mb-6">
@@ -100,14 +100,14 @@
                     </div>
                 </div>
 
-                <div v-if="subtotal < 100" class="bg-green-50 text-green-700 p-4 rounded-lg mb-6 text-sm">
+                <div v-if="subtotal < 100" class="free-shipping-msg bg-green-50 text-green-700 p-4 rounded-lg mb-6 text-sm">
                     <i class="fas fa-info-circle mr-2"></i>
                     Plus que {{ formatPrice(100 - subtotal) }} pour la livraison gratuite !
                 </div>
 
                 <a
                     href="/checkout"
-                    class="block w-full bg-green-600 text-white py-4 rounded-lg font-bold text-center hover:bg-green-700 transition"
+                    class="checkout-btn block w-full bg-green-600 text-white py-4 rounded-lg font-bold text-center hover:bg-green-700 transition"
                 >
                     Passer commande
                 </a>

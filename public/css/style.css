@@ -1,5 +1,199 @@
 /* Styles personnalisés Football Shop */
 
+/* ===== PAGE CHECKOUT ===== */
+
+/* Titre checkout */
+.checkout-title {
+    position: relative !important;
+    padding-bottom: 15px !important;
+}
+
+.checkout-title::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 80px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+    border-radius: 2px !important;
+}
+
+/* Sections du formulaire */
+.checkout-section {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+}
+
+.checkout-section:hover {
+    border-color: #16a34a !important;
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.1) !important;
+}
+
+.checkout-section h2 {
+    color: #16a34a !important;
+}
+
+/* Inputs du formulaire */
+.checkout-input {
+    border: 2px solid #e5e7eb !important;
+    transition: all 0.2s ease !important;
+}
+
+.checkout-input:focus {
+    border-color: #16a34a !important;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1) !important;
+}
+
+/* Récapitulatif checkout */
+.checkout-summary {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+    border: 2px solid #16a34a !important;
+}
+
+.checkout-summary h2 {
+    color: #16a34a !important;
+    position: relative !important;
+    padding-bottom: 12px !important;
+}
+
+.checkout-summary h2::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 40px !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+}
+
+/* Article du récapitulatif */
+.checkout-item {
+    transition: all 0.2s ease !important;
+    padding: 12px !important;
+    border-radius: 6px !important;
+}
+
+.checkout-item:hover {
+    background: rgba(22, 163, 74, 0.05) !important;
+}
+
+.checkout-item img {
+    border: 2px solid #e5e7eb !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.checkout-item:hover img {
+    border-color: #16a34a !important;
+}
+
+/* Bouton confirmer commande */
+.confirm-btn {
+    background: linear-gradient(135deg, #16a34a, #15803d) !important;
+    transition: all 0.3s ease !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 12px 28px rgba(22, 163, 74, 0.35) !important;
+}
+
+/* Message simulation paiement */
+.payment-simulation {
+    background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
+    border-left: 4px solid #f59e0b !important;
+}
+
+/* ===== PAGE PANIER ===== */
+
+/* Titre panier */
+#cart-app > h1 {
+    position: relative !important;
+    padding-bottom: 15px !important;
+}
+
+#cart-app > h1::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 80px !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+    border-radius: 2px !important;
+}
+
+/* Articles du panier */
+.cart-item {
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+}
+
+.cart-item:hover {
+    border-left-color: #16a34a !important;
+    background: #f9fafb !important;
+}
+
+.cart-item img {
+    transition: transform 0.3s ease !important;
+    border: 2px solid #e5e7eb !important;
+}
+
+.cart-item:hover img {
+    transform: scale(1.08) !important;
+    border-color: #16a34a !important;
+}
+
+/* Boutons +/- quantité */
+.quantity-btn {
+    transition: all 0.2s ease !important;
+    border: 2px solid #e5e7eb !important;
+}
+
+.quantity-btn:hover {
+    border-color: #16a34a !important;
+    color: #16a34a !important;
+    transform: scale(1.1) !important;
+}
+
+/* Récapitulatif */
+.cart-summary {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+    border: 2px solid #16a34a !important;
+}
+
+.cart-summary h2 {
+    color: #16a34a !important;
+}
+
+/* Bouton passer commande */
+.checkout-btn {
+    background: linear-gradient(135deg, #16a34a, #15803d) !important;
+    transition: all 0.3s ease !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 12px 28px rgba(22, 163, 74, 0.35) !important;
+}
+
+/* Message livraison gratuite */
+.free-shipping-msg {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0) !important;
+    border-left: 4px solid #16a34a !important;
+    animation: shimmer 2s ease-in-out infinite !important;
+}
+
+@keyframes shimmer {
+    0%, 100% { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+    50% { background: linear-gradient(135deg, #bbf7d0, #86efac); }
+}
+
 /* ===== PAGE PRODUITS - FILTRES ET CARTES ===== */
 
 /* Sidebar filtres */
