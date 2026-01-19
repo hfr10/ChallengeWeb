@@ -7,13 +7,13 @@ $total = $subtotal + $shippingCost;
 ?>
 
 <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-8">Finaliser ma commande</h1>
+    <h1 class="checkout-title text-3xl font-bold mb-8">Finaliser ma commande</h1>
 
     <form action="/checkout" method="POST" class="flex flex-col lg:flex-row gap-8">
         <!-- Formulaire -->
         <div class="flex-1 space-y-6">
             <!-- Adresse de livraison -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="checkout-section bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-xl font-bold mb-6">
                     <i class="fas fa-truck mr-2 text-green-600"></i>
                     Adresse de livraison
@@ -27,7 +27,7 @@ $total = $subtotal + $shippingCost;
                             name="shipping_first_name"
                             value="<?= htmlspecialchars($old['shipping_first_name'] ?? $user['first_name'] ?? '') ?>"
                             required
-                            class="w-full px-4 py-2 border <?= isset($errors['shipping_first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                            class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_first_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                         >
                         <?php if (isset($errors['shipping_first_name'])): ?>
                             <p class="text-red-500 text-sm mt-1"><?= htmlspecialchars($errors['shipping_first_name']) ?></p>
@@ -40,7 +40,7 @@ $total = $subtotal + $shippingCost;
                             name="shipping_last_name"
                             value="<?= htmlspecialchars($old['shipping_last_name'] ?? $user['last_name'] ?? '') ?>"
                             required
-                            class="w-full px-4 py-2 border <?= isset($errors['shipping_last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                            class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_last_name']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                         >
                     </div>
                 </div>
@@ -52,7 +52,7 @@ $total = $subtotal + $shippingCost;
                         name="shipping_address"
                         value="<?= htmlspecialchars($old['shipping_address'] ?? $user['address'] ?? '') ?>"
                         required
-                        class="w-full px-4 py-2 border <?= isset($errors['shipping_address']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                        class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_address']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                     >
                 </div>
 
@@ -64,7 +64,7 @@ $total = $subtotal + $shippingCost;
                             name="shipping_postal_code"
                             value="<?= htmlspecialchars($old['shipping_postal_code'] ?? $user['postal_code'] ?? '') ?>"
                             required
-                            class="w-full px-4 py-2 border <?= isset($errors['shipping_postal_code']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                            class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_postal_code']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                         >
                     </div>
                     <div>
@@ -74,7 +74,7 @@ $total = $subtotal + $shippingCost;
                             name="shipping_city"
                             value="<?= htmlspecialchars($old['shipping_city'] ?? $user['city'] ?? '') ?>"
                             required
-                            class="w-full px-4 py-2 border <?= isset($errors['shipping_city']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                            class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_city']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                         >
                     </div>
                 </div>
@@ -86,7 +86,7 @@ $total = $subtotal + $shippingCost;
                         name="shipping_phone"
                         value="<?= htmlspecialchars($old['shipping_phone'] ?? $user['phone'] ?? '') ?>"
                         required
-                        class="w-full px-4 py-2 border <?= isset($errors['shipping_phone']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
+                        class="checkout-input w-full px-4 py-2 border <?= isset($errors['shipping_phone']) ? 'border-red-500' : 'border-gray-300' ?> rounded-lg focus:ring-2 focus:ring-green-500"
                     >
                 </div>
 
@@ -99,7 +99,7 @@ $total = $subtotal + $shippingCost;
             </div>
 
             <!-- Notes -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="checkout-section bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-xl font-bold mb-4">
                     <i class="fas fa-comment mr-2 text-green-600"></i>
                     Notes (optionnel)
@@ -108,17 +108,17 @@ $total = $subtotal + $shippingCost;
                     name="notes"
                     rows="3"
                     placeholder="Instructions spéciales pour la livraison..."
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                    class="checkout-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 ><?= htmlspecialchars($old['notes'] ?? '') ?></textarea>
             </div>
 
             <!-- Paiement (simulation) -->
-            <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="checkout-section bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-xl font-bold mb-4">
                     <i class="fas fa-credit-card mr-2 text-green-600"></i>
                     Paiement
                 </h2>
-                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <div class="payment-simulation bg-yellow-50 text-yellow-800 p-4 rounded-lg">
                     <p class="text-yellow-800">
                         <i class="fas fa-info-circle mr-2"></i>
                         <strong>Mode simulation :</strong> Le paiement sera automatiquement validé pour cette démonstration.
@@ -129,13 +129,13 @@ $total = $subtotal + $shippingCost;
 
         <!-- Récapitulatif -->
         <div class="lg:w-80">
-            <div class="bg-white rounded-lg shadow-md p-6 sticky top-6">
+            <div class="checkout-summary bg-white rounded-lg shadow-md p-6 sticky top-6">
                 <h2 class="text-xl font-bold mb-6">Récapitulatif</h2>
 
                 <!-- Articles -->
                 <div class="space-y-4 mb-6">
                     <?php foreach ($cart->items as $item): ?>
-                        <div class="flex gap-3">
+                        <div class="checkout-item flex gap-3">
                             <img
                                 src="<?= htmlspecialchars($item->product->getImageUrl()) ?>"
                                 alt=""
@@ -178,7 +178,7 @@ $total = $subtotal + $shippingCost;
 
                 <button
                     type="submit"
-                    class="w-full mt-6 bg-green-600 text-white py-4 rounded-lg font-bold hover:bg-green-700 transition"
+                    class="confirm-btn w-full mt-6 bg-green-600 text-white py-4 rounded-lg font-bold hover:bg-green-700 transition"
                 >
                     <i class="fas fa-check mr-2"></i>
                     Confirmer la commande

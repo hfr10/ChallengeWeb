@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         [v-cloak] { display: none; }
     </style>
@@ -95,38 +96,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-auto">
+    <footer class="footer-section">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Football Shop</h3>
-                    <p class="text-gray-400">Votre boutique en ligne de produits de football.</p>
+                <div class="footer-column">
+                    <h3 class="footer-title">
+                        <i class="fas fa-futbol mr-2"></i>Football Shop
+                    </h3>
+                    <p class="footer-text">Votre boutique en ligne de produits de football.</p>
                 </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Catégories</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/categories/maillots" class="hover:text-white">Maillots</a></li>
-                        <li><a href="/categories/chaussures" class="hover:text-white">Chaussures</a></li>
-                        <li><a href="/categories/equipements" class="hover:text-white">Équipements</a></li>
+                <div class="footer-column">
+                    <h3 class="footer-title">Catégories</h3>
+                    <ul class="footer-list">
+                        <li><a href="/categories/maillots" class="footer-link">Maillots</a></li>
+                        <li><a href="/categories/chaussures" class="footer-link">Chaussures</a></li>
+                        <li><a href="/categories/equipements" class="footer-link">Équipements</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Mon compte</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/login" class="hover:text-white">Connexion</a></li>
-                        <li><a href="/register" class="hover:text-white">Inscription</a></li>
-                        <li><a href="/orders" class="hover:text-white">Mes commandes</a></li>
+                <div class="footer-column">
+                    <h3 class="footer-title">Mon compte</h3>
+                    <ul class="footer-list">
+                        <li><a href="/login" class="footer-link">Connexion</a></li>
+                        <li><a href="/register" class="footer-link">Inscription</a></li>
+                        <li><a href="/orders" class="footer-link">Mes commandes</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-4">Contact</h3>
-                    <ul class="space-y-2 text-gray-400">
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-list">
                         <li><i class="fas fa-envelope mr-2"></i>contact@footballshop.fr</li>
                         <li><i class="fas fa-phone mr-2"></i>01 23 45 67 89</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <div class="footer-divider">
                 <p>&copy; <?= date('Y') ?> Football Shop - Projet B2 Dev Web</p>
             </div>
         </div>
