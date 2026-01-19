@@ -142,6 +142,32 @@ try {
             'is_featured' => true,
             'sizes' => ['S', 'M', 'L', 'XL', 'XXL'],
         ],
+        [
+            'name' => 'Maillot Authentique FC Barcelone Domicile 25/26',
+            'slug' => 'maillot-authentique-FC-barcelone-domicile-25/26',
+            'description' => 'La technologie innovante AEROREADY évacue l\'humidité de votre corps, vous laissant ainsi à l\'aise, au sec et au frais',
+            'short_description' => 'Découvrez le maillot légendaire des meringués de la saison 25/26.',
+            'price' => 110,
+            'stock' => 51,
+            'sku' => 'REA-MAD-MAI-DOM',
+            'category_id' => $categoryIds['maillots'],
+            'brand' => 'Adidas',
+            'is_featured' => true,
+            'sizes' => ['S', 'M', 'L', 'XL', 'XXL'],
+        ],
+        [
+            'name' => 'Real Madrid Maillot Domicile 25/26',
+            'slug' => 'real-madrid-maillot-domicile-25/26',
+            'description' => 'Maillot du FC Barcelone de la Saison 25/26',
+            'short_description' => 'Le maillot domicile 2025/26 du FC Barcelone actualise l\'un des looks les plus reconnaissables du football.',
+            'price' => 120,
+            'stock' => 57,
+            'sku' => 'MAI-AUT-FC-BAR',
+            'category_id' => $categoryIds['maillots'],
+            'brand' => 'Nike',
+            'is_featured' => true,
+            'sizes' => ['S', 'M', 'L', 'XL', 'XXL'],
+        ],
 
         // Chaussures
         [
