@@ -7,7 +7,7 @@ use PDOException;
 
 /**
  * Gestionnaire de connexion à la base de données PostgreSQL
- * Implémente le pattern Singleton
+ * Implémente le pattern Singleton pour une instance unique de PDO
  */
 class Database
 {

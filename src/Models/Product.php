@@ -4,7 +4,7 @@ namespace App\Models;
 
 /**
  * Modèle Product
- * Représente un produit du catalogue
+ * Représente un produit du catalogue avec ses attributs et relations
  */
 class Product
 {

@@ -7,6 +7,7 @@ use App\Models\User;
 
 /**
  * Repository pour les utilisateurs
+ * Gère les opérations CRUD et authentification
  */
 class UserRepository
 {

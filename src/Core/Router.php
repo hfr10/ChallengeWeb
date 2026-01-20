@@ -14,6 +14,9 @@ class Router
 
     /**
      * Enregistre une route GET
+     * @param string $path Chemin de la route
+     * @param array $handler Contrôleur et méthode
+     * @param array $middlewares Middlewares à appliquer
      */
     public function get(string $path, array $handler, array $middlewares = []): self
     {
@@ -22,6 +25,9 @@ class Router
 
     /**
      * Enregistre une route POST
+     * @param string $path Chemin de la route
+     * @param array $handler Contrôleur et méthode
+     * @param array $middlewares Middlewares à appliquer
      */
     public function post(string $path, array $handler, array $middlewares = []): self
     {

@@ -21,14 +21,15 @@ class ProductController extends Controller
     }
 
     /**
-     * Liste des produits
+     * Liste des produits avec filtres et pagination
      */
     public function index(): void
     {
         $query = $this->getQueryData();
         $page = max(1, (int) ($query['page'] ?? 1));
-        $perPage = 12;
+        $perPage = 12; // Nombre de produits par page
 
+        // Récupération des filtres depuis la requête
         $filters = [
             'search' => $query['search'] ?? null,
             'category_id' => $query['category'] ?? null,
@@ -38,7 +39,7 @@ class ProductController extends Controller
             'sort' => $query['sort'] ?? 'newest',
         ];
 
-        $products = $this->productRepository->findAll(
+        // Récupération des produits avec filtres
             $filters,
             $perPage,
             ($page - 1) * $perPage
